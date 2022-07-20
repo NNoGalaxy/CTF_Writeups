@@ -10,7 +10,11 @@ Why use p and q when I can use more? Connect with nc jupiter.challenges.picoctf.
 ## Writeup 
 Alright, i started this challenge by doing research about multi-prime RSA and came across a couple of articles (such as : [this](https://crypto.stackexchange.com/questions/67043/what-is-multi-prime-rsa-rsa-mp))
 In simple words, you can use multiple prime numbers in rsa instead of just P & Q. 
+
+
 first we need to start by factorizing N, for this we use [this website](https://www.alpertron.com.ar/ECM.HTM)
+
+
 we input N and press factor.
 After it's done, we take the numbers and calculate phi (we do this by taking each number and subtract 1 from them)
 ```

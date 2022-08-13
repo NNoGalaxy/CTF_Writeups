@@ -21,7 +21,7 @@ As the name suggests, this name is about timing-based attacks.
 Anyway, we are given an executable file. We have to figure out how much time it takes for the file to return an answer after we input our PIN code. 
 Time to get coding!
 
-I found this script from this write-up. This script does the job perfectly :
+I found this script from this [write-up](https://dev.to/lambdamamba/ctf-writeup-picoctf-2022-forensics-55p3#side). This script does the job perfectly :
 ```py
 from pwn import *
 import time

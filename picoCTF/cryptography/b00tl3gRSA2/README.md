@@ -22,6 +22,7 @@ OR you could use python to solve this
 >>> d = 65537
 >>> 
 >>> print(long_to_bytes(pow(c, d, n)).decode())
+
 picoCTF{bad_1d3a5_4986370}
 ```
 

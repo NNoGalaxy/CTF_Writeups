@@ -1,0 +1,28 @@
+# b00tl3gRSA2
+
+## Description
+In RSA d is a lot bigger than e, why don't we use d to encrypt instead of e? Connect with nc jupiter.challenges.picoctf.org 57464.
+
+## Hint(s)
+
+1. What is e generally?
+
+## Writeup 
+in RSA, we can replace e with d and RSA will still work. but, if the value of e is default (63357), then thats a vulnerability and RSA can be broken, as d will be known.
+I solved this challenge using [dcode.fr](https://www.dcode.fr/rsa-cipher).
+
+Just put the output values in the website and it'll give you the flag within seconds.
+
+OR you could use python to solve this 
+
+```sh
+>>> from Crypto.Util.number import long_to_bytes
+>>> c = 36111408876106376633391200531165197363036230075296854654077662438074789830165585987001655362225050049176335366569468793161750562625008549109938214695711055928034753999411339381187843631445655350667505009531648899591341157996524558047364569162061353344419398959313639469235045985168355511460709222081525229144
+>>> n = 125743293369462751517911540635025527543480937953861521406229102477699091280232787685205609311533004161905515129120763008031401913468316980208127547158895127135210471612124589203033891391764669282172026800767539683479049221798509980721719491365621176940095244531413397181902720834779599342074081999370149044333
+>>> d = 65537
+>>> 
+>>> print(long_to_bytes(pow(c, d, n)).decode())
+picoCTF{bad_1d3a5_4986370}
+```
+
+theres too much to learn when it comes to RSA.
